@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <link rel="stylesheet" href="actualiser.css">
+    <title>Moddifier</title>
+</head>
+<body>
+    <form action="actualiser-produit.php" method="post">
+        <input type="hidden" name="id" value= "{{ id }}">
+        <p>Type :</p>
+        <input type="text" name="type" value="{{ type }}" placeholder="type">
+        <p>Nom :</p>
+        <input type="text" name="nom" value="{{ nom }}"  placeholder="nom">
+        <p>Description :</p>
+        <input type="text" name="description" value="{{ description }}" placeholder="description">
+        <p>Prix :</p>
+        <input type="text" name="prix" value="{{ prix }}" placeholder="prix">
+        <p>Quantité :</p>
+        <input type="text" name="quantite" value="{{ quantite }}" placeholder="quantite">
+        <input type="submit" value="Mettre a jour">
+    </form>
+</body>
+</html>

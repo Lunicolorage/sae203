@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="afficher.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes passés</title>
+</head>
+<body>
+    <table> 
+        <tr>
+            <th class="tab">Id Commande</th>
+            <th class="tab">Date</th>
+            <th class="tab">Client</th>
+            <th class="tab">Quantité</th>
+            <th class="tab">Produits</th>
+            <th class="tab">Prix total</th>
+        </tr>
+        {% for commande in commandes %}
+        <tr>
+            <td class="tab">{{ commande.idCommande }}</td>
+            <td class="tab">{{ commande.dateHeure }}</td>
+            <td class="tab">{{ commande.client }}</td>
+            <td class="tab">{{ commande.quantite }}</td>
+            <td class="tab">{{ commande.nom }}</td>
+            <td class="tab">{{ commande.prixTotal }}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+    <br>
+    <div class="button-wrapper">
+        <a class="ajout" href="./formulaire-commande.php">Ajouter une commande</a>
+    </div>
+</body>
+</html>

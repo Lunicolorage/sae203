@@ -1,0 +1,78 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card .count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0590b3;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th, td {
+    border-bottom: solid 1px #dddddd;
+    padding: 10px 20px;
+}
+
+th {
+    background-color: #0590b3;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ajout {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    color: black;
+    background-color: white;
+    border: solid 1px #0590b3;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ajout:hover {
+    background-color: #0590b3;
+    color: white;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}

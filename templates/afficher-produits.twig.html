@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits disponibles</title>
+    <link rel="stylesheet" href="afficher.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <p>Nombre de produits</p>
+            <p class="count">{{ nbtotal }}</p>
+        </div>
+        <div class="card">
+            <p>Nombre d'animaux</p>
+            <p class="count">{{ nbanimal }}</p>
+        </div>
+        <div class="card">
+            <p>Nombre de fleurs</p>
+            <p class="count">{{ nbfleur }}</p>
+        </div>
+    </div>
+
+    <table> 
+        <tr>
+            <th class="tab">Type</th>
+            <th class="tab">Nom</th>
+            <th class="tab">Description</th>
+            <th class="tab">Prix</th>
+            <th class="tab">Quantité</th>
+            <th class="tab">Modifier</th>
+            <th class="tab">Supprimer</th>
+        </tr>
+        {% for element in produits %}
+        <tr>
+            <td class="tab">{{ element.categorie }}</td>
+            <td class="tab">{{ element.nom }}</td>
+            <td class="tab">{{ element.description }}</td>
+            <td class="tab">{{ element.prix }}</td>
+            <td class="tab">{{ element.quantite }}</td>
+            <td class="tab2"><a class="ajout" href='formulaire-actualiser-produit.php?id={{ element.idProduit }}'>Modifier</a></td>
+            <td>
+                <form action='supprimer-produit.php' method='POST'>
+                    <input type='hidden' name='idProduit' value='{{ element.idProduit }}'> 
+                    <input class="ajout" type='submit' value='Supprimer'>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table> 
+    <br>
+    <div class="button-wrapper">
+        <a class="ajout" href="formulaire-creation-produit.html">Ajouter un produit</a>
+    </div>
+</body>
+</html>
